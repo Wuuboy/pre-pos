@@ -1,5 +1,19 @@
 'use strict';
 
 function createUpdatedCollection(collectionA, objectB) {
-  return '实现练习要求，并改写该行代码。';
+  console.log(objectB["value"])
+  for(var i =0 ; i< collectionA.length; i++){
+    for(var key in collectionA[i]){
+      console.log(collectionA[i]["key"])
+      if (objectB["value"].indexOf(collectionA[i]["key"])>-1){
+        var sub = Math.floor(collectionA[i]["count"]/3)
+        collectionA[i]["count"]-=sub
+        break
+      }else {
+        continue
+      }
+    }
+  }
+  console.log(collectionA)
+  return collectionA
 }
